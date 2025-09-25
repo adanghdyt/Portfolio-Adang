@@ -161,7 +161,21 @@
           </div>
         </div>
       </div>
-
+<div class="fileActions">
+        <span class="buttonView" ng-click="openViewer(Lightbox.image)" ng-show="Lightbox.image.loaded &amp;&amp; Lightbox.imageUrl != '//:0' &amp;&amp; Lightbox.image.is_viewable" analytics-on="click" analytics-category="3d views" analytics-event="3d view in lightbox" style="">
+          <span class="button3D">
+            <span class="gc-icon gc-icon-medium gc-icon-3d-white"></span>
+          </span>
+          <span class="buttonText">Load in 3D viewer</span>
+        </span>
+        <span class="contributor ng-hide" ng-show="Lightbox.image.contributor" style="">
+          <!-- ngIf: Lightbox.image.contributor.cached_slug -->
+          <!-- ngIf: !Lightbox.image.contributor.cached_slug --><span class="deleted-contributor ng-scope" ng-if="!Lightbox.image.contributor.cached_slug">
+            <span class="contributor-name">Uploaded by Anonymous</span>
+            <img class="avatar">
+          </span><!-- end ngIf: !Lightbox.image.contributor.cached_slug -->
+        </span>
+      </div>
       <div class="row">
         <div class="col-md-4">
           <div class="work-box" data-model="models/Lighting_Tower.glb" data-toggle="modal" data-target="#viewerModal">
