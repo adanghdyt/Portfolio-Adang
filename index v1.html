@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Portfolio Web - Adang Hidayat</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="keywords" content="Portfolio, Mechanical Engineer, Design Engineer, Web Designer, VBA Excel" />
+  <meta name="description" content="Portfolio of Adang Hidayat — Design Engineer, Mechanical Engineer, Web Designer, and VBA developer." />
+
+  <!-- Favicons -->
+  <link href="img/Design AH Black.png" rel="icon" />
+  <link href="img/Logo Design.jpg" rel="apple-touch-icon" />
+
+  <!-- Bootstrap & Libraries CSS -->
+  <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+  <link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet" />
+  <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet" />
+  <link href="css/style.css" rel="stylesheet" />
+</head>
+
+<body id="page-top">
+  <!-- Navbar -->
+  <nav class="navbar navbar-b navbar-trans navbar-expand-md fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand js-scroll" href="#page-top">Adang Hidayat</a>
+      <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarDefault">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="navbar-collapse collapse justify-content-end" id="navbarDefault">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link js-scroll active" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link js-scroll" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link js-scroll" href="#work">Portfolio</a></li>
+          <li class="nav-item"><a class="nav-link js-scroll" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <header id="home" class="intro route bg-image" style="background-image: url(img/Backgroung.png)">
+    <div class="overlay-itro"></div>
+    <div class="intro-content display-table">
+      <div class="table-cell">
+        <div class="container text-center">
+          <h1 class="intro-title mb-4">I am Adang Hidayat</h1>
+          <p class="intro-subtitle">
+            <span class="text-slider-items">Design Engineer,Web Designer,Mechanical Engineer,Maintenance</span>
+            <strong class="text-slider"></strong>
+          </p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- About -->
+  <section id="about" class="about-mf sect-pt4 route">
+    <div class="container">
+      <div class="box-shadow-full">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="about-img mb-3">
+              <img src="img/Foto Adang Hidayat.jpg" class="img-fluid rounded b-shadow-a" alt="Adang Hidayat" loading="lazy" />
+            </div>
+            <div class="about-info mb-3">
+              <p><span class="title-s">Name: </span>Adang Hidayat</p>
+              <p><span class="title-s">Field Study: </span>Mechanical Engineering</p>
+              <p><span class="title-s">Email: </span><a href="mailto:adanghidayat.97@gmail.com">adanghidayat.97@gmail.com</a></p>
+              <p><span class="title-s">Phone: </span><a href="tel:+6285775222621">0857-7522-2621</a></p>
+            </div>
+            <!-- Skills otomatis dari JS -->
+            <div id="skills"></div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="title-box-2"><h5 class="title-left">About me</h5></div>
+            <p class="lead">Hello! My name is Adang Hidayat. I was born in Jakarta, 05 January 1997. I am a fresh graduate from Politeknik Negeri Jakarta...</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio -->
+  <section id="work" class="portfolio-mf sect-pt4 route">
+    <div class="container">
+      <div class="title-box text-center">
+        <h3 class="title-a">Portfolio</h3>
+        <div class="line-mf"></div>
+      </div>
+      <div class="row" id="portfolio"></div>
+    </div>
+  </section>
+
+  <!-- Modal 3D Viewer -->
+  <div class="modal fade" id="viewerModal" tabindex="-1">
+    <div class="modal-dialog modal-xl">
+      <div class="modal-content bg-dark">
+        <div class="modal-header border-0">
+          <h5 class="modal-title text-white">3D Viewer</h5>
+          <button type="button" class="close text-white" data-dismiss="modal">&times;</button>
+        </div>
+        <div class="modal-body p-0">
+          <div id="viewer3d" style="width:100%; height:600px; background:#111;"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Contact -->
+  <section id="contact" class="paralax-mf footer-paralax bg-image sect-mt4 route" style="background-image: url(img/Polban.jpg)">
+    <div class="overlay-mf"></div>
+    <div class="container">
+      <div class="box-shadow-full">
+        <div class="row">
+          <div class="col-md-6">
+            <h5 class="title-left">Send Message Us</h5>
+            <form name="Project-Port" method="post">
+              <div class="form-group mb-3"><label>Full Name</label><input type="text" class="form-control" name="nama"/></div>
+              <div class="form-group mb-3"><label>Email</label><input type="email" class="form-control" name="email"/></div>
+              <div class="form-group mb-3"><label>Message</label><textarea class="form-control" name="pesan"></textarea></div>
+              <button type="submit" class="btn btn-primary btn-kirim">Send</button>
+              <button class="btn btn-primary btn-loading d-none" type="button" disabled><span class="spinner-border spinner-border-sm"></span> Loading...</button>
+            </form>
+          </div>
+          <div class="col-md-6">
+            <h5 class="title-left">Get in Touch</h5>
+            <ul class="list-ico">
+              <li><span class="ion-ios-location"></span> Tangerang, Indonesia</li>
+              <li><span class="ion-ios-telephone"></span> <a href="tel:+6285775222621">0857-7522-2621</a></li>
+              <li><span class="ion-email"></span> <a href="mailto:adanghidayat.97@gmail.com">adanghidayat.97@gmail.com</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <footer class="text-center mt-4"><p>&copy; 2025 Adang Hidayat. All Rights Reserved</p></footer>
+    </div>
+  </section>
+
+  <!-- JS Libraries -->
+  <script src="lib/jquery/jquery.min.js"></script>
+  <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+  <script src="lib/lightbox/js/lightbox.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+
+  <!-- ==== DATA & LOOP ==== -->
+  <script>
+  // SKILLS
+  const skills = [
+    { name: "Fusion 360", value: 75 },
+    { name: "Autodesk Inventor", value: 70 },
+    { name: "Blender", value: 70 },
+    { name: "SOLIDWORKS", value: 85 },
+    { name: "AUTOCAD", value: 80 },
+    { name: "MICROSOFT OFFICE", value: 90 }
+  ];
+  const skillBox = document.getElementById("skills");
+  skillBox.innerHTML = "<p class='title-s'>Skills</p>";
+  skills.forEach(s => {
+    skillBox.innerHTML += `
+      <span>${s.name}</span> <span class="pull-right">${s.value}%</span>
+      <div class="progress"><div class="progress-bar" style="width:${s.value}%"></div></div>`;
+  });
+
+  // PORTFOLIO
+  const works = [
+    { title:"Lighting Tower", img:"img/Lighting Tower.jpg", category:"Design Mechanical", date:"Jan. 2020", model:"models/Lighting_Tower.glb" },
+    { title:"Electric Car - Formula", img:"img/Molis.jpg", category:"Design Mechanical", date:"July. 2018" },
+    { title:"Drone", img:"img/Drone.jpg", category:"Design Mechanical", date:"Feb. 2020", model:"models/Drone.glb" },
+    { title:"Dies", img:"img/Stay_Comp_Canister.png", category:"Design Dies", date:"25 Sept. 2025", model:"models/Dies_staycompcanister_bending.glb" },
+    { title:"Dashboard", img:"img/Dashboard.PNG", category:"Dashboard VBA", date:"25 Sept. 2025" },
+    { title:"Report", img:"img/Report.PNG", category:"Report VBA", date:"25 Sept. 2025" },
+    { title:"Mouse", img:"img/Mouse.PNG", category:"Design Mechanical", date:"25 Sept. 2025", model:"models/Mouse.glb" },
+    { title:"Avoiding Obstacle Car", img:"img/Avoiding Obstacle Car.PNG", category:"Arduino Project", date:"17 Feb. 2020", model:"models/Avoiding Obstacle Car.glb" },
+    { title:"Skripsi", img:"img/Wheel Lifter.PNG", category:"Wheel Lifter", date:"17 Mar. 2020", model:"models/Skripsi.glb" }
+  ];
+  const port = document.getElementById("portfolio");
+  works.forEach(w => {
+    port.innerHTML += `
+      <div class="col-md-4">
+        <div class="work-box" ${w.model ? `data-model="${w.model}"` : `data-lightbox="gallery-mf"`}>
+          <div class="work-img"><img src="${w.img}" alt="${w.title}" class="img-fluid" loading="lazy" /></div>
+          <div class="work-content">
+            <h2 class="w-title">${w.title}</h2>
+            <div class="w-more"><span>${w.category}</span> / <span>${w.date}</span></div>
+          </div>
+        </div>
+      </div>`;
+  });
+
+  // 3D Viewer Logic
+  let pendingModelPath = null;
+  document.addEventListener('click', e => {
+    const box = e.target.closest('.work-box[data-model]');
+    if (box) {
+      pendingModelPath = box.getAttribute('data-model');
+      $('#viewerModal').modal('show');
+    }
+  });
+
+  $('#viewerModal').on('shown.bs.modal', () => {
+    if (pendingModelPath) init3DScene(pendingModelPath);
+  }).on('hidden.bs.modal', () => {
+    const mount = document.getElementById('viewer3d');
+    mount.innerHTML = ''; // reset
+    pendingModelPath = null;
+  });
+
+  function init3DScene(modelPath) {
+    const mount = document.getElementById('viewer3d');
+    mount.innerHTML = '';
+    const scene = new THREE.Scene();
+    const camera = new THREE.PerspectiveCamera(60, mount.clientWidth / mount.clientHeight, 0.1, 1000);
+    const renderer = new THREE.WebGLRenderer({ antialias: true });
+    renderer.setSize(mount.clientWidth, mount.clientHeight);
+    mount.appendChild(renderer.domElement);
+
+    const controls = new THREE.OrbitControls(camera, renderer.domElement);
+    camera.position.set(0, 2, 5);
+    controls.update();
+
+    const light = new THREE.HemisphereLight(0xffffff, 0x444444, 1);
+    scene.add(light);
+
+    const loader = new THREE.GLTFLoader();
+    loader.load(modelPath, gltf => {
+      scene.add(gltf.scene);
+      animate();
+    });
+
+    function animate() {
+      requestAnimationFrame(animate);
+      renderer.render(scene, camera);
+    }
+  }
+  </script>
+</body>
+</html>
