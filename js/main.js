@@ -149,6 +149,34 @@ function init3DScene(modelPath) {
     animate();
 }
 
+loader.load(modelPath, (gltf) => {
+  const model = gltf.scene;
+  scene.add(model);
+
+  // Hitung bounding box model
+  const box = new THREE.Box3().setFromObject(model);
+  const size = box.getSize(new THREE.Vector3()).length();
+  const center = box.getCenter(new THREE.Vector3());
+
+  // Reposition camera supaya view pas
+  controls.reset();
+  camera.near = size / 100;
+  camera.far = size * 100;
+  camera.updateProjectionMatrix();
+
+  camera.position.copy(center);
+  camera.position.x += size / 2;
+  camera.position.y += size / 2;
+  camera.position.z += size / 2;
+  camera.lookAt(center);
+
+  // Supaya OrbitControls fokus ke tengah model
+  controls.target.copy(center);
+  controls.update();
+}, undefined, (error) => {
+  console.error('Error loading model:', error);
+});
+
 // Event klik portfolio
 document.querySelectorAll('.work-box[data-model]').forEach(item => {
   item.addEventListener('click', () => {
@@ -157,6 +185,7 @@ document.querySelectorAll('.work-box[data-model]').forEach(item => {
     $('#viewerModal').modal('show');
   });
 });
+
 
 
 })(jQuery);
