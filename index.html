@@ -23,7 +23,28 @@
 
   <!-- Main Stylesheet -->
   <link href="css/style.css" rel="stylesheet" />
+   
+  <script>
+  document.addEventListener('DOMContentLoaded', function () {
+    $('#cvModal').on('shown.bs.modal', function () {
+      const frame = document.getElementById('cvFrame');
+      if (frame && (frame.src === '' || frame.src === 'about:blank')) {
+        frame.src = frame.getAttribute('data-src');
+      }
+    });
+
+    // Optional: kosongkan lagi saat modal ditutup supaya RAM lega
+    $('#cvModal').on('hidden.bs.modal', function () {
+      const frame = document.getElementById('cvFrame');
+      if (frame) {
+        frame.src = 'about:blank';
+      }
+    });
+  });
+</script>
+
 </head>
+
 
 <body id="page-top">
   <!-- Navbar -->
